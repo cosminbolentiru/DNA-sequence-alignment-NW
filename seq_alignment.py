@@ -1,3 +1,4 @@
+# we will see if this works 
 # Global constants that can be changed for preferance 
 match = 1
 mismatch = -1
