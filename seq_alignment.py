@@ -1,6 +1,3 @@
-# program that will globally align two sequences together
-#     using the Needleman and Wunsch algorithm 
-
 # Global constants that can be changed for preferance 
 match = 1
 mismatch = -1
