@@ -1,13 +1,7 @@
-# Global constants that can be changed for preferance
-match = 1
-mismatch = -1
-gap = -1
-
-#    str1 and str2 must be made up of 'A', 'B', 'C', 'D'
-
-seq_1 = 'AGGTCACCT'
-seq_2 = 'GGCACGT'
-
+# This file contains all the global variables, helper functions and main
+#   function that will implement NW Global alignment algorithm
+#
+# The following is an example of the format that will be printed
 # EXAMPLE OF 2D ARRAY:
 #
 #     A  G  G  T  C  A  C  C  T
@@ -19,6 +13,15 @@ seq_2 = 'GGCACGT'
 # C-5
 # G-6
 # T-7
+
+# Global constants that can be changed for preferance
+match = 1
+mismatch = -1
+gap = -1
+
+# Enter the two sequences to be aligned here
+seq_1 = 'AGGTCACCT'
+seq_2 = 'GGCACGT'
 
 # produces a list of letters (list = one seq)
 def seq_list(seq):
@@ -35,8 +38,8 @@ def base_list(length):
         num_lst = num_lst + [i * -1]
     return num_lst
 
-
-# diag function
+# will produce the value of the diagnol test whil comparing values
+#   within the matrix
 def diagnaol_val(element, pos_1, pos_2, seq_1, seq_2):
     # if there is a match
     if seq_1[pos_1] == seq_2[pos_2]:
@@ -56,10 +59,6 @@ def seq_align(seq1, seq2):
     lst_seq1 = seq_list(seq1)
     lst_seq2 = seq_list(seq2)
 
-    # ///////////////////////////////////////////////
-    # new try for printing the filled matirx
-    # fill matrix with all 0's
-        # each element will be list of len(seq2)+1
     matrix = []
     for i in range(len_2 + 1):
         if i == 0:
@@ -94,7 +93,7 @@ def seq_align(seq1, seq2):
     # prints 2-D grid
     for i in range(len(matrix)):
             print(matrix[i])
-
-
 # END OF FUNCTION
+
+# Testing
 seq_align(seq_1, seq_2)
