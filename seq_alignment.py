@@ -95,5 +95,6 @@ def seq_align(seq1, seq2):
             print(matrix[i])
 # END OF FUNCTION
 
-# Tests
+# Testing 
 seq_align(seq_1, seq_2)
+
