@@ -19,7 +19,6 @@ match = 1
 mismatch = -1
 gap = -1
 
-# Enter the two sequences to be aligned here 
 seq_1 = 'AGGTCACCT'
 seq_2 = 'GGCACGT'
 
@@ -95,6 +94,5 @@ def seq_align(seq1, seq2):
             print(matrix[i])
 # END OF FUNCTION
 
-# Testing 
+# Testing
 seq_align(seq_1, seq_2)
-
